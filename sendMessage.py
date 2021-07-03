@@ -6,7 +6,7 @@ from twilio.rest import Client
 # Find these values at https://twilio.com/user/account
 # To set up environmental variables, see http://twil.io/secure
 account_sid = 'AC1dd3db25ac62230e0e9fb1c676e164dd'
-auth_token = '5effb5274ea6eb64fd4c8681eaa5ad77'
+auth_token = 'dd289c57a10b4ac3854b24b04d68287b'
 
 client = Client(account_sid, auth_token)
 
