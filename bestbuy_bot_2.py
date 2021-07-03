@@ -59,10 +59,10 @@ def beginBuyingProcess(driver, wait, ATCButtons):
 
     # sound off the alarm, we now have to do manual work
     # th = threading.Thread(target=threadFunc)
-    # sendText("item has been added to cart")  # old way of sending text
     exec(open('sendMessage.py').read())
     startAlarm()
 
+    print("waiting on you to finish buying process")
     # wait till item in cart
     # wait.until(EC.presence_of_element_located((By.CLASS_NAME, "go-to-cart-button")))
     # myLogger("item in cart now")
@@ -71,7 +71,7 @@ def beginBuyingProcess(driver, wait, ATCButtons):
 
 
     # don't turn off the web driver
-    driver.implicitly_wait(9999999999999)
+    WebDriverWait(driver, 9999999999).until(EC.presence_of_element_located((By.CLASS_NAME, "$$$$$$$$$$$$$$$$")))
 
 
 
@@ -83,10 +83,6 @@ def runBot():
     driver = utils.createDriver()
     wait = WebDriverWait(driver, 5)
     myLogger("created driver")
-
-    # TODO MANUALLY login (for now)
-    # TODO MANUALLY add credit card info on best buy
-    # driver.implicitly_wait(60)
 
     # go to search results
     myLogger("loading page DOUBLE CHECK THE LINK PLEASE")
@@ -110,14 +106,13 @@ def runBot():
             myLogger("finished refresh")
             resetTimer()
 
+        # TODO MANUALLY login (for now)
+        # TODO MANUALLY add credit card info on best buy
 
 
 
-    # TODO find first in-stock and add to cart
-    # TODO LATER - find the ideal card
     # TODO TEST on PS5 page
     # TODO OPTIMIZATION
-    #   use a time logger to figure out how much faster individual pages are
     #   maybe use beautifulsoup to query things faster
 
 def runBot2():
