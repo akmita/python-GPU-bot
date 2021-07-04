@@ -15,8 +15,8 @@ client.api.account.messages.create(
     from_="+19165867068",
     body="item added to cart GO TO YOUR COMPUTER NOW")
 
-
-client.api.account.messages.create(
-    to="+12248045851",
-    from_="+19165867068",
-    body="item added to cart GO TO YOUR COMPUTER NOW")
+# TODO validate phone
+# client.api.account.messages.create(
+#     to="+12248045851",
+#     from_="+19165867068",
+#     body="item added to cart GO TO YOUR COMPUTER NOW")

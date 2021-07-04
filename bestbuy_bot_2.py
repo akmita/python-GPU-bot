@@ -84,10 +84,19 @@ def runBot():
     wait = WebDriverWait(driver, 5)
     myLogger("created driver")
 
+
     # go to search results
     myLogger("loading page DOUBLE CHECK THE LINK PLEASE")
-    # driver.get(NVIDIA_results)
-    driver.get(PS5_results)
+    # TODO _____ testing with PS5 results _____
+    driver.get(NVIDIA_results)
+    # driver.get(PS5_results)
+
+    try:
+        #  TODO remove wait once we develop auto login
+        WebDriverWait(driver, 40).until(EC.presence_of_element_located((By.CLASS_NAME, "$$$$$$$$$$$$$$$$")))
+    except:
+        print("continueing")
+
 
     # query for add to cart buttons
     myLogger("page loaded")
